@@ -1,0 +1,15 @@
+---
+description: Foodtruck Tipsy Dragon — animation rules (GPU-only, no logic mutation)
+globs: **/*
+alwaysApply: false
+---
+
+# Foodtruck animations
+
+1. **Never mutate working game logic** when adding animation wrappers: order validation (`distributeTrayToGroup`), scoring (`scoreServe` / `scoreMiss` / `scoreWrong`), catalog asset paths, and environment `allowedItemIds` stay intact.
+2. **GPU acceleration only:** animate via `transform` (`translate3d` / `scale` / `rotate`) and `opacity`. Do not animate `top`, `left`, `width`, or `height` for motion (layout thrashing). CSS custom props `--jx` / `--jy` may drive `translate3d` targets.
+3. **Graceful degradation:** under `prefers-reduced-motion: reduce`, snap states instantly (no multi-second loops) and keep timers / deadlines correct.
+4. Prefer CSS keyframes in `src/styles/animations.css` over heavy animation libraries unless already a dependency.
+5. Clean up floating reward / juice particles within ~900ms; no permanent lingering particles (`useFloatingScores`, `useGameJuice`).
+6. Drag/drop is an additive UX path — click-to-tray must keep working.
+7. **Juice tiers:** light / medium / heavy feedback for serve / combo / perfect / wrong / miss — scale intensity, don't spam heavy FX on every tap.

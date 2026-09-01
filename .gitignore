@@ -1,4 +1,8 @@
-node_modules
-dist
+.qa-crops/
+
+test-results/
+playwright-report/
+
+node_modules/
+dist/
 .env
-*.log

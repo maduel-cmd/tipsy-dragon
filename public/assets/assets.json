@@ -1,0 +1,410 @@
+{
+  "sheet": {
+    "src": "/assets/game_asset_library.webp",
+    "width": 1024,
+    "height": 559
+  },
+  "hero": {
+    "src": "/assets/foodtruck_hero.webp",
+    "width": 1024,
+    "height": 559
+  },
+  "woodenBar": {
+    "src": "/assets/wooden_bar_surface.webp",
+    "full": "/assets/wooden_bar_counter.webp",
+    "width": 922,
+    "height": 286
+  },
+  "foodSheets": {
+    "meals": "/assets/foodtruck_sheets/sheet_meals_3x3.jpg",
+    "sides": "/assets/foodtruck_sheets/sheet_sides_3x4.jpg",
+    "extended": "/assets/foodtruck_sheets/extended_food_grid.jpg"
+  },
+  "sprites": {
+    "bg_square": {
+      "x": 8,
+      "y": 8,
+      "w": 320,
+      "h": 185,
+      "src": "/assets/sprites/bg_square.webp"
+    },
+    "bg_kitchen": {
+      "x": 335,
+      "y": 8,
+      "w": 300,
+      "h": 185,
+      "src": "/assets/sprites/bg_kitchen.webp"
+    },
+    "tex_cobble": {
+      "x": 645,
+      "y": 8,
+      "w": 155,
+      "h": 185,
+      "src": "/assets/sprites/tex_cobble.webp"
+    },
+    "overlay_lights": {
+      "x": 810,
+      "y": 8,
+      "w": 170,
+      "h": 120,
+      "src": "/assets/sprites/overlay_lights.webp"
+    },
+    "cursor_neon": {
+      "x": 930,
+      "y": 125,
+      "w": 85,
+      "h": 85,
+      "src": "/assets/sprites/cursor_neon.webp"
+    },
+    "ramen_classic": {
+      "x": 52,
+      "y": 208,
+      "w": 150,
+      "h": 145,
+      "src": "/assets/sprites/ramen_classic.webp"
+    },
+    "ramen_spicy": {
+      "x": 218,
+      "y": 218,
+      "w": 138,
+      "h": 138,
+      "src": "/assets/sprites/ramen_spicy.webp"
+    },
+    "ramen_vegan": {
+      "x": 368,
+      "y": 220,
+      "w": 135,
+      "h": 138,
+      "src": "/assets/sprites/ramen_vegan.webp"
+    },
+    "dish_yakitori": {
+      "x": 210,
+      "y": 355,
+      "w": 155,
+      "h": 128,
+      "src": "/assets/sprites/dish_yakitori.webp"
+    },
+    "dish_karaage": {
+      "x": 375,
+      "y": 360,
+      "w": 115,
+      "h": 90,
+      "src": "/assets/sprites/dish_karaage.webp"
+    },
+    "dish_gyoza": {
+      "x": 512,
+      "y": 348,
+      "w": 98,
+      "h": 88,
+      "src": "/assets/sprites/dish_gyoza.webp"
+    },
+    "sushi_rolls": {
+      "x": 525,
+      "y": 205,
+      "w": 170,
+      "h": 125,
+      "src": "/assets/sprites/sushi_rolls.webp"
+    },
+    "sushi_nigiri": {
+      "x": 712,
+      "y": 212,
+      "w": 128,
+      "h": 92,
+      "src": "/assets/sprites/sushi_nigiri.webp"
+    },
+    "sashimi_platter": {
+      "x": 848,
+      "y": 220,
+      "w": 100,
+      "h": 120,
+      "src": "/assets/sprites/sashimi_platter.webp"
+    },
+    "drink_whisky_glass": {
+      "x": 562,
+      "y": 432,
+      "w": 82,
+      "h": 118,
+      "src": "/assets/sprites/drink_whisky_glass.webp"
+    },
+    "drink_cocktail_yuzu": {
+      "x": 728,
+      "y": 400,
+      "w": 90,
+      "h": 145,
+      "src": "/assets/sprites/drink_cocktail_yuzu.webp"
+    },
+    "drink_beer_can": {
+      "x": 932,
+      "y": 395,
+      "w": 88,
+      "h": 160,
+      "src": "/assets/sprites/drink_beer_can.webp"
+    },
+    "drink_wine_bottle": {
+      "x": 872,
+      "y": 328,
+      "w": 68,
+      "h": 226,
+      "src": "/assets/sprites/drink_wine_bottle.webp"
+    },
+    "burger_double": {
+      "x": 0,
+      "y": 0,
+      "w": 512,
+      "h": 512,
+      "src": "/assets/items/prepared/burger_double.webp"
+    },
+    "steak_ribeye": {
+      "x": 0,
+      "y": 0,
+      "w": 512,
+      "h": 512,
+      "src": "/assets/items/prepared/steak_ribeye.webp"
+    },
+    "cheese_platter": {
+      "x": 0,
+      "y": 0,
+      "w": 512,
+      "h": 512,
+      "src": "/assets/items/prepared/cheese_platter.webp"
+    },
+    "rice_bowl": {
+      "x": 0,
+      "y": 0,
+      "w": 512,
+      "h": 512,
+      "src": "/assets/items/prepared/rice_bowl.webp"
+    },
+    "breakfast_eggs": {
+      "x": 0,
+      "y": 0,
+      "w": 512,
+      "h": 512,
+      "src": "/assets/items/prepared/breakfast_eggs.webp"
+    },
+    "breakfast_meats": {
+      "x": 0,
+      "y": 0,
+      "w": 512,
+      "h": 512,
+      "src": "/assets/items/prepared/breakfast_meats.webp"
+    },
+    "croissant": {
+      "x": 0,
+      "y": 0,
+      "w": 512,
+      "h": 512,
+      "src": "/assets/items/prepared/croissant.webp"
+    },
+    "waffle_fruit": {
+      "x": 0,
+      "y": 0,
+      "w": 512,
+      "h": 512,
+      "src": "/assets/items/prepared/waffle_fruit.webp"
+    },
+    "chicken_waffles": {
+      "x": 0,
+      "y": 0,
+      "w": 512,
+      "h": 512,
+      "src": "/assets/items/prepared/chicken_waffles.webp"
+    },
+    "fries": {
+      "x": 0,
+      "y": 0,
+      "w": 512,
+      "h": 512,
+      "src": "/assets/items/sides/fries.webp"
+    },
+    "hotdog": {
+      "x": 0,
+      "y": 0,
+      "w": 512,
+      "h": 512,
+      "src": "/assets/items/sides/hotdog.webp"
+    },
+    "bbq_wings": {
+      "x": 0,
+      "y": 0,
+      "w": 512,
+      "h": 512,
+      "src": "/assets/items/sides/bbq_wings.webp"
+    },
+    "draft_beer": {
+      "x": 0,
+      "y": 0,
+      "w": 512,
+      "h": 512,
+      "src": "/assets/items/sides/draft_beer.webp"
+    },
+    "onion_rings": {
+      "x": 0,
+      "y": 0,
+      "w": 512,
+      "h": 512,
+      "src": "/assets/items/sides/onion_rings.webp"
+    },
+    "pancakes": {
+      "x": 0,
+      "y": 0,
+      "w": 512,
+      "h": 512,
+      "src": "/assets/items/sides/pancakes.webp"
+    },
+    "tacos": {
+      "x": 0,
+      "y": 0,
+      "w": 512,
+      "h": 512,
+      "src": "/assets/items/sides/tacos.webp"
+    },
+    "cheeseburger": {
+      "x": 0,
+      "y": 0,
+      "w": 512,
+      "h": 512,
+      "src": "/assets/items/sides/cheeseburger.webp"
+    },
+    "dipping_sauces": {
+      "x": 0,
+      "y": 0,
+      "w": 512,
+      "h": 512,
+      "src": "/assets/items/sides/dipping_sauces.webp"
+    },
+    "nachos": {
+      "x": 0,
+      "y": 0,
+      "w": 512,
+      "h": 512,
+      "src": "/assets/items/sides/nachos.webp"
+    },
+    "calamari": {
+      "x": 0,
+      "y": 0,
+      "w": 512,
+      "h": 512,
+      "src": "/assets/items/sides/calamari.webp"
+    },
+    "buffalo_wings": {
+      "x": 0,
+      "y": 0,
+      "w": 512,
+      "h": 512,
+      "src": "/assets/items/sides/buffalo_wings.webp"
+    },
+    "salmon_fillet": {
+      "x": 0,
+      "y": 0,
+      "w": 512,
+      "h": 512,
+      "src": "/assets/items/prepared/salmon_fillet.webp"
+    },
+    "seafood_paella": {
+      "x": 0,
+      "y": 0,
+      "w": 512,
+      "h": 512,
+      "src": "/assets/items/prepared/seafood_paella.webp"
+    },
+    "fish_and_chips": {
+      "x": 0,
+      "y": 0,
+      "w": 512,
+      "h": 512,
+      "src": "/assets/items/prepared/fish_and_chips.webp"
+    },
+    "spaghetti_bolognese": {
+      "x": 0,
+      "y": 0,
+      "w": 512,
+      "h": 512,
+      "src": "/assets/items/prepared/spaghetti_bolognese.webp"
+    },
+    "lasagna_slice": {
+      "x": 0,
+      "y": 0,
+      "w": 512,
+      "h": 512,
+      "src": "/assets/items/prepared/lasagna_slice.webp"
+    },
+    "pad_thai": {
+      "x": 0,
+      "y": 0,
+      "w": 512,
+      "h": 512,
+      "src": "/assets/items/prepared/pad_thai.webp"
+    },
+    "ramen_bowl": {
+      "x": 0,
+      "y": 0,
+      "w": 512,
+      "h": 512,
+      "src": "/assets/items/prepared/ramen_bowl.webp"
+    },
+    "shakshuka_pan": {
+      "x": 0,
+      "y": 0,
+      "w": 512,
+      "h": 512,
+      "src": "/assets/items/prepared/shakshuka_pan.webp"
+    },
+    "hummus_plate": {
+      "x": 0,
+      "y": 0,
+      "w": 512,
+      "h": 512,
+      "src": "/assets/items/prepared/hummus_plate.webp"
+    },
+    "shawarma_wrap": {
+      "x": 0,
+      "y": 0,
+      "w": 512,
+      "h": 512,
+      "src": "/assets/items/prepared/shawarma_wrap.webp"
+    },
+    "fried_chicken_basket": {
+      "x": 0,
+      "y": 0,
+      "w": 512,
+      "h": 512,
+      "src": "/assets/items/prepared/fried_chicken_basket.webp"
+    },
+    "mac_and_cheese": {
+      "x": 0,
+      "y": 0,
+      "w": 512,
+      "h": 512,
+      "src": "/assets/items/prepared/mac_and_cheese.webp"
+    },
+    "chocolate_lava": {
+      "x": 0,
+      "y": 0,
+      "w": 512,
+      "h": 512,
+      "src": "/assets/items/prepared/chocolate_lava.webp"
+    },
+    "tiramisu_slice": {
+      "x": 0,
+      "y": 0,
+      "w": 512,
+      "h": 512,
+      "src": "/assets/items/prepared/tiramisu_slice.webp"
+    },
+    "ice_cream_cone": {
+      "x": 0,
+      "y": 0,
+      "w": 512,
+      "h": 512,
+      "src": "/assets/items/prepared/ice_cream_cone.webp"
+    },
+    "churros_plate": {
+      "x": 0,
+      "y": 0,
+      "w": 512,
+      "h": 512,
+      "src": "/assets/items/prepared/churros_plate.webp"
+    }
+  }
+}

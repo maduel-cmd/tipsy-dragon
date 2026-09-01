@@ -3,16 +3,69 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>בר הפוד־טרק — משחק לילה</title>
+    <meta name="theme-color" content="#f0c14a" />
+    <meta name="mobile-web-app-capable" content="yes" />
+    <meta name="apple-mobile-web-app-capable" content="yes" />
+    <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent" />
+    <meta name="apple-mobile-web-app-title" content="Tipsy Dragon" />
+    <link rel="manifest" href="/manifest.webmanifest" />
+    <link rel="icon" type="image/png" href="/icon-192.png" />
+    <link rel="apple-touch-icon" href="/icon-192.png" />
+    <title>The Tipsy Dragon</title>
+    <!-- פונטים אופציונליים — באופליין נופלים ל־system fonts -->
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
     <link
       href="https://fonts.googleapis.com/css2?family=Heebo:wght@400;600;800&family=Rubik:wght@500;700;900&display=swap"
       rel="stylesheet"
+      media="print"
+      onload="this.media='all'"
     />
+    <noscript>
+      <link
+        href="https://fonts.googleapis.com/css2?family=Heebo:wght@400;600;800&family=Rubik:wght@500;700;900&display=swap"
+        rel="stylesheet"
+      />
+    </noscript>
   </head>
   <body>
     <div id="root"></div>
+    <!-- ניקוי מטמון PWA ישן לפני טעינת האפליקציה (קטלוג גלידות → Tipsy) -->
+    <script>
+      (function () {
+        var BUILD = "tipsy-v32-meta-sprint";
+        try {
+          if (localStorage.getItem("ftb_build") === BUILD) return;
+          var done = function () {
+            try {
+              localStorage.setItem("ftb_build", BUILD);
+            } catch (e) {}
+          };
+          var tasks = [];
+          if (window.caches && caches.keys) {
+            tasks.push(
+              caches.keys().then(function (keys) {
+                return Promise.all(keys.map(function (k) {
+                  return caches.delete(k);
+                }));
+              }),
+            );
+          }
+          if (navigator.serviceWorker && navigator.serviceWorker.getRegistrations) {
+            tasks.push(
+              navigator.serviceWorker.getRegistrations().then(function (regs) {
+                return Promise.all(
+                  regs.map(function (r) {
+                    return r.unregister();
+                  }),
+                );
+              }),
+            );
+          }
+          Promise.all(tasks).then(done).catch(done);
+        } catch (e) {}
+      })();
+    </script>
     <script type="module" src="/src/main.tsx"></script>
   </body>
 </html>

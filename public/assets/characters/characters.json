@@ -1,0 +1,896 @@
+{
+  "sheet": {
+    "src": "/assets/characters/modular_characters_sheet.webp",
+    "width": 1024,
+    "height": 572
+  },
+  "layerOrder": [
+    "base",
+    "clothes",
+    "hair",
+    "hat",
+    "glasses",
+    "headphones",
+    "accessory"
+  ],
+  "anchors": {
+    "hair": {
+      "x": 0.5,
+      "y": 0.05,
+      "scale": 0.7
+    },
+    "hat": {
+      "x": 0.5,
+      "y": 0.0,
+      "scale": 0.55
+    },
+    "glasses": {
+      "x": 0.5,
+      "y": 0.14,
+      "scale": 0.45
+    },
+    "headphones": {
+      "x": 0.5,
+      "y": 0.08,
+      "scale": 0.55
+    },
+    "accessory": {
+      "x": 0.78,
+      "y": 0.58,
+      "scale": 0.32
+    },
+    "clothes": {
+      "x": 0.5,
+      "y": 0.42,
+      "scale": 0.75
+    }
+  },
+  "sprites": {
+    "base_kid_0": {
+      "x": 50,
+      "y": 354,
+      "w": 58,
+      "h": 84,
+      "src": "/assets/characters/sprites/base_kid_0.webp",
+      "category": "base",
+      "gender": "kid"
+    },
+    "base_kid_1": {
+      "x": 148,
+      "y": 348,
+      "w": 60,
+      "h": 86,
+      "src": "/assets/characters/sprites/base_kid_1.webp",
+      "category": "base",
+      "gender": "kid"
+    },
+    "base_man_0": {
+      "x": 26,
+      "y": 68,
+      "w": 52,
+      "h": 116,
+      "src": "/assets/characters/sprites/base_man_0.webp",
+      "category": "base",
+      "gender": "man"
+    },
+    "base_man_1": {
+      "x": 98,
+      "y": 68,
+      "w": 52,
+      "h": 116,
+      "src": "/assets/characters/sprites/base_man_1.webp",
+      "category": "base",
+      "gender": "man"
+    },
+    "base_man_2": {
+      "x": 170,
+      "y": 68,
+      "w": 52,
+      "h": 116,
+      "src": "/assets/characters/sprites/base_man_2.webp",
+      "category": "base",
+      "gender": "man"
+    },
+    "base_man_3": {
+      "x": 246,
+      "y": 68,
+      "w": 52,
+      "h": 116,
+      "src": "/assets/characters/sprites/base_man_3.webp",
+      "category": "base",
+      "gender": "man"
+    },
+    "base_woman_0": {
+      "x": 26,
+      "y": 212,
+      "w": 52,
+      "h": 124,
+      "src": "/assets/characters/sprites/base_woman_0.webp",
+      "category": "base",
+      "gender": "woman"
+    },
+    "base_woman_1": {
+      "x": 98,
+      "y": 212,
+      "w": 52,
+      "h": 124,
+      "src": "/assets/characters/sprites/base_woman_1.webp",
+      "category": "base",
+      "gender": "woman"
+    },
+    "base_woman_2": {
+      "x": 170,
+      "y": 212,
+      "w": 52,
+      "h": 124,
+      "src": "/assets/characters/sprites/base_woman_2.webp",
+      "category": "base",
+      "gender": "woman"
+    },
+    "base_woman_3": {
+      "x": 242,
+      "y": 212,
+      "w": 52,
+      "h": 124,
+      "src": "/assets/characters/sprites/base_woman_3.webp",
+      "category": "base",
+      "gender": "woman"
+    },
+    "example_0": {
+      "x": 26,
+      "y": 456,
+      "w": 64,
+      "h": 102,
+      "src": "/assets/characters/sprites/example_0.webp",
+      "category": "example",
+      "gender": "any"
+    },
+    "example_1": {
+      "x": 104,
+      "y": 456,
+      "w": 64,
+      "h": 102,
+      "src": "/assets/characters/sprites/example_1.webp",
+      "category": "example",
+      "gender": "any"
+    },
+    "example_2": {
+      "x": 182,
+      "y": 456,
+      "w": 64,
+      "h": 102,
+      "src": "/assets/characters/sprites/example_2.webp",
+      "category": "example",
+      "gender": "any"
+    },
+    "example_3": {
+      "x": 260,
+      "y": 456,
+      "w": 64,
+      "h": 102,
+      "src": "/assets/characters/sprites/example_3.webp",
+      "category": "example",
+      "gender": "any"
+    },
+    "hair_male_0": {
+      "x": 355,
+      "y": 76,
+      "w": 33,
+      "h": 36,
+      "src": "/assets/characters/sprites/hair_male_0.webp",
+      "category": "hair",
+      "gender": "man"
+    },
+    "hair_male_1": {
+      "x": 399,
+      "y": 76,
+      "w": 33,
+      "h": 36,
+      "src": "/assets/characters/sprites/hair_male_1.webp",
+      "category": "hair",
+      "gender": "man"
+    },
+    "hair_male_2": {
+      "x": 355,
+      "y": 124,
+      "w": 33,
+      "h": 36,
+      "src": "/assets/characters/sprites/hair_male_2.webp",
+      "category": "hair",
+      "gender": "man"
+    },
+    "hair_male_3": {
+      "x": 399,
+      "y": 124,
+      "w": 33,
+      "h": 36,
+      "src": "/assets/characters/sprites/hair_male_3.webp",
+      "category": "hair",
+      "gender": "man"
+    },
+    "hair_male_4": {
+      "x": 355,
+      "y": 172,
+      "w": 33,
+      "h": 36,
+      "src": "/assets/characters/sprites/hair_male_4.webp",
+      "category": "hair",
+      "gender": "man"
+    },
+    "hair_male_5": {
+      "x": 399,
+      "y": 172,
+      "w": 33,
+      "h": 36,
+      "src": "/assets/characters/sprites/hair_male_5.webp",
+      "category": "hair",
+      "gender": "man"
+    },
+    "hair_female_0": {
+      "x": 355,
+      "y": 264,
+      "w": 33,
+      "h": 35,
+      "src": "/assets/characters/sprites/hair_female_0.webp",
+      "category": "hair",
+      "gender": "woman"
+    },
+    "hair_female_1": {
+      "x": 399,
+      "y": 264,
+      "w": 33,
+      "h": 35,
+      "src": "/assets/characters/sprites/hair_female_1.webp",
+      "category": "hair",
+      "gender": "woman"
+    },
+    "hair_female_2": {
+      "x": 443,
+      "y": 264,
+      "w": 33,
+      "h": 35,
+      "src": "/assets/characters/sprites/hair_female_2.webp",
+      "category": "hair",
+      "gender": "woman"
+    },
+    "hair_female_3": {
+      "x": 355,
+      "y": 310,
+      "w": 33,
+      "h": 35,
+      "src": "/assets/characters/sprites/hair_female_3.webp",
+      "category": "hair",
+      "gender": "woman"
+    },
+    "hair_female_4": {
+      "x": 399,
+      "y": 310,
+      "w": 33,
+      "h": 35,
+      "src": "/assets/characters/sprites/hair_female_4.webp",
+      "category": "hair",
+      "gender": "woman"
+    },
+    "hair_female_5": {
+      "x": 443,
+      "y": 310,
+      "w": 33,
+      "h": 35,
+      "src": "/assets/characters/sprites/hair_female_5.webp",
+      "category": "hair",
+      "gender": "woman"
+    },
+    "hair_female_6": {
+      "x": 355,
+      "y": 356,
+      "w": 33,
+      "h": 35,
+      "src": "/assets/characters/sprites/hair_female_6.webp",
+      "category": "hair",
+      "gender": "woman"
+    },
+    "hair_female_7": {
+      "x": 399,
+      "y": 356,
+      "w": 33,
+      "h": 35,
+      "src": "/assets/characters/sprites/hair_female_7.webp",
+      "category": "hair",
+      "gender": "woman"
+    },
+    "hair_female_8": {
+      "x": 443,
+      "y": 356,
+      "w": 33,
+      "h": 35,
+      "src": "/assets/characters/sprites/hair_female_8.webp",
+      "category": "hair",
+      "gender": "woman"
+    },
+    "hair_kid_0": {
+      "x": 355,
+      "y": 380,
+      "w": 33,
+      "h": 30,
+      "src": "/assets/characters/sprites/hair_kid_0.webp",
+      "category": "hair",
+      "gender": "kid"
+    },
+    "hair_kid_1": {
+      "x": 399,
+      "y": 380,
+      "w": 33,
+      "h": 30,
+      "src": "/assets/characters/sprites/hair_kid_1.webp",
+      "category": "hair",
+      "gender": "kid"
+    },
+    "hat_0": {
+      "x": 449,
+      "y": 77,
+      "w": 37,
+      "h": 35,
+      "src": "/assets/characters/sprites/hat_0.webp",
+      "category": "hat",
+      "gender": "any"
+    },
+    "hat_1": {
+      "x": 501,
+      "y": 77,
+      "w": 37,
+      "h": 35,
+      "src": "/assets/characters/sprites/hat_1.webp",
+      "category": "hat",
+      "gender": "any"
+    },
+    "hat_2": {
+      "x": 553,
+      "y": 77,
+      "w": 37,
+      "h": 35,
+      "src": "/assets/characters/sprites/hat_2.webp",
+      "category": "hat",
+      "gender": "any"
+    },
+    "hat_3": {
+      "x": 449,
+      "y": 125,
+      "w": 37,
+      "h": 35,
+      "src": "/assets/characters/sprites/hat_3.webp",
+      "category": "hat",
+      "gender": "any"
+    },
+    "hat_4": {
+      "x": 501,
+      "y": 125,
+      "w": 37,
+      "h": 35,
+      "src": "/assets/characters/sprites/hat_4.webp",
+      "category": "hat",
+      "gender": "any"
+    },
+    "hat_5": {
+      "x": 553,
+      "y": 125,
+      "w": 37,
+      "h": 35,
+      "src": "/assets/characters/sprites/hat_5.webp",
+      "category": "hat",
+      "gender": "any"
+    },
+    "hat_6": {
+      "x": 449,
+      "y": 173,
+      "w": 37,
+      "h": 35,
+      "src": "/assets/characters/sprites/hat_6.webp",
+      "category": "hat",
+      "gender": "any"
+    },
+    "hat_7": {
+      "x": 501,
+      "y": 173,
+      "w": 37,
+      "h": 35,
+      "src": "/assets/characters/sprites/hat_7.webp",
+      "category": "hat",
+      "gender": "any"
+    },
+    "hat_8": {
+      "x": 553,
+      "y": 173,
+      "w": 37,
+      "h": 35,
+      "src": "/assets/characters/sprites/hat_8.webp",
+      "category": "hat",
+      "gender": "any"
+    },
+    "glasses_0": {
+      "x": 449,
+      "y": 264,
+      "w": 37,
+      "h": 33,
+      "src": "/assets/characters/sprites/glasses_0.webp",
+      "category": "glasses",
+      "gender": "any"
+    },
+    "glasses_1": {
+      "x": 501,
+      "y": 264,
+      "w": 37,
+      "h": 33,
+      "src": "/assets/characters/sprites/glasses_1.webp",
+      "category": "glasses",
+      "gender": "any"
+    },
+    "glasses_2": {
+      "x": 553,
+      "y": 264,
+      "w": 37,
+      "h": 33,
+      "src": "/assets/characters/sprites/glasses_2.webp",
+      "category": "glasses",
+      "gender": "any"
+    },
+    "glasses_3": {
+      "x": 449,
+      "y": 310,
+      "w": 37,
+      "h": 33,
+      "src": "/assets/characters/sprites/glasses_3.webp",
+      "category": "glasses",
+      "gender": "any"
+    },
+    "glasses_4": {
+      "x": 501,
+      "y": 310,
+      "w": 37,
+      "h": 33,
+      "src": "/assets/characters/sprites/glasses_4.webp",
+      "category": "glasses",
+      "gender": "any"
+    },
+    "glasses_5": {
+      "x": 553,
+      "y": 310,
+      "w": 37,
+      "h": 33,
+      "src": "/assets/characters/sprites/glasses_5.webp",
+      "category": "glasses",
+      "gender": "any"
+    },
+    "glasses_6": {
+      "x": 449,
+      "y": 356,
+      "w": 37,
+      "h": 33,
+      "src": "/assets/characters/sprites/glasses_6.webp",
+      "category": "glasses",
+      "gender": "any"
+    },
+    "headphones_0": {
+      "x": 449,
+      "y": 381,
+      "w": 37,
+      "h": 29,
+      "src": "/assets/characters/sprites/headphones_0.webp",
+      "category": "headphones",
+      "gender": "any"
+    },
+    "headphones_1": {
+      "x": 501,
+      "y": 381,
+      "w": 37,
+      "h": 29,
+      "src": "/assets/characters/sprites/headphones_1.webp",
+      "category": "headphones",
+      "gender": "any"
+    },
+    "headphones_2": {
+      "x": 553,
+      "y": 381,
+      "w": 37,
+      "h": 29,
+      "src": "/assets/characters/sprites/headphones_2.webp",
+      "category": "headphones",
+      "gender": "any"
+    },
+    "clothes_male_0": {
+      "x": 636,
+      "y": 76,
+      "w": 38,
+      "h": 35,
+      "src": "/assets/characters/sprites/clothes_male_0.webp",
+      "category": "clothes",
+      "gender": "man"
+    },
+    "clothes_male_1": {
+      "x": 686,
+      "y": 76,
+      "w": 38,
+      "h": 35,
+      "src": "/assets/characters/sprites/clothes_male_1.webp",
+      "category": "clothes",
+      "gender": "man"
+    },
+    "clothes_male_2": {
+      "x": 736,
+      "y": 76,
+      "w": 38,
+      "h": 35,
+      "src": "/assets/characters/sprites/clothes_male_2.webp",
+      "category": "clothes",
+      "gender": "man"
+    },
+    "clothes_male_3": {
+      "x": 636,
+      "y": 122,
+      "w": 38,
+      "h": 35,
+      "src": "/assets/characters/sprites/clothes_male_3.webp",
+      "category": "clothes",
+      "gender": "man"
+    },
+    "clothes_male_4": {
+      "x": 686,
+      "y": 122,
+      "w": 38,
+      "h": 35,
+      "src": "/assets/characters/sprites/clothes_male_4.webp",
+      "category": "clothes",
+      "gender": "man"
+    },
+    "clothes_male_5": {
+      "x": 736,
+      "y": 122,
+      "w": 38,
+      "h": 35,
+      "src": "/assets/characters/sprites/clothes_male_5.webp",
+      "category": "clothes",
+      "gender": "man"
+    },
+    "clothes_male_6": {
+      "x": 636,
+      "y": 168,
+      "w": 38,
+      "h": 35,
+      "src": "/assets/characters/sprites/clothes_male_6.webp",
+      "category": "clothes",
+      "gender": "man"
+    },
+    "clothes_male_7": {
+      "x": 686,
+      "y": 168,
+      "w": 38,
+      "h": 35,
+      "src": "/assets/characters/sprites/clothes_male_7.webp",
+      "category": "clothes",
+      "gender": "man"
+    },
+    "clothes_male_8": {
+      "x": 736,
+      "y": 168,
+      "w": 38,
+      "h": 35,
+      "src": "/assets/characters/sprites/clothes_male_8.webp",
+      "category": "clothes",
+      "gender": "man"
+    },
+    "clothes_male_9": {
+      "x": 636,
+      "y": 214,
+      "w": 38,
+      "h": 35,
+      "src": "/assets/characters/sprites/clothes_male_9.webp",
+      "category": "clothes",
+      "gender": "man"
+    },
+    "clothes_male_10": {
+      "x": 686,
+      "y": 214,
+      "w": 38,
+      "h": 35,
+      "src": "/assets/characters/sprites/clothes_male_10.webp",
+      "category": "clothes",
+      "gender": "man"
+    },
+    "clothes_kid_0": {
+      "x": 636,
+      "y": 264,
+      "w": 38,
+      "h": 35,
+      "src": "/assets/characters/sprites/clothes_kid_0.webp",
+      "category": "clothes",
+      "gender": "kid"
+    },
+    "clothes_kid_1": {
+      "x": 686,
+      "y": 264,
+      "w": 38,
+      "h": 35,
+      "src": "/assets/characters/sprites/clothes_kid_1.webp",
+      "category": "clothes",
+      "gender": "kid"
+    },
+    "clothes_kid_2": {
+      "x": 736,
+      "y": 264,
+      "w": 38,
+      "h": 35,
+      "src": "/assets/characters/sprites/clothes_kid_2.webp",
+      "category": "clothes",
+      "gender": "kid"
+    },
+    "clothes_kid_3": {
+      "x": 636,
+      "y": 310,
+      "w": 38,
+      "h": 35,
+      "src": "/assets/characters/sprites/clothes_kid_3.webp",
+      "category": "clothes",
+      "gender": "kid"
+    },
+    "clothes_kid_4": {
+      "x": 686,
+      "y": 310,
+      "w": 38,
+      "h": 35,
+      "src": "/assets/characters/sprites/clothes_kid_4.webp",
+      "category": "clothes",
+      "gender": "kid"
+    },
+    "clothes_kid_5": {
+      "x": 736,
+      "y": 310,
+      "w": 38,
+      "h": 35,
+      "src": "/assets/characters/sprites/clothes_kid_5.webp",
+      "category": "clothes",
+      "gender": "kid"
+    },
+    "clothes_kid_6": {
+      "x": 636,
+      "y": 356,
+      "w": 38,
+      "h": 35,
+      "src": "/assets/characters/sprites/clothes_kid_6.webp",
+      "category": "clothes",
+      "gender": "kid"
+    },
+    "clothes_kid_7": {
+      "x": 686,
+      "y": 356,
+      "w": 38,
+      "h": 35,
+      "src": "/assets/characters/sprites/clothes_kid_7.webp",
+      "category": "clothes",
+      "gender": "kid"
+    },
+    "clothes_kid_8": {
+      "x": 736,
+      "y": 356,
+      "w": 38,
+      "h": 35,
+      "src": "/assets/characters/sprites/clothes_kid_8.webp",
+      "category": "clothes",
+      "gender": "kid"
+    },
+    "clothes_female_0": {
+      "x": 798,
+      "y": 76,
+      "w": 38,
+      "h": 35,
+      "src": "/assets/characters/sprites/clothes_female_0.webp",
+      "category": "clothes",
+      "gender": "woman"
+    },
+    "clothes_female_1": {
+      "x": 848,
+      "y": 76,
+      "w": 38,
+      "h": 35,
+      "src": "/assets/characters/sprites/clothes_female_1.webp",
+      "category": "clothes",
+      "gender": "woman"
+    },
+    "clothes_female_2": {
+      "x": 898,
+      "y": 76,
+      "w": 38,
+      "h": 35,
+      "src": "/assets/characters/sprites/clothes_female_2.webp",
+      "category": "clothes",
+      "gender": "woman"
+    },
+    "clothes_female_3": {
+      "x": 798,
+      "y": 122,
+      "w": 38,
+      "h": 35,
+      "src": "/assets/characters/sprites/clothes_female_3.webp",
+      "category": "clothes",
+      "gender": "woman"
+    },
+    "clothes_female_4": {
+      "x": 848,
+      "y": 122,
+      "w": 38,
+      "h": 35,
+      "src": "/assets/characters/sprites/clothes_female_4.webp",
+      "category": "clothes",
+      "gender": "woman"
+    },
+    "clothes_female_5": {
+      "x": 898,
+      "y": 122,
+      "w": 38,
+      "h": 35,
+      "src": "/assets/characters/sprites/clothes_female_5.webp",
+      "category": "clothes",
+      "gender": "woman"
+    },
+    "clothes_female_6": {
+      "x": 798,
+      "y": 168,
+      "w": 38,
+      "h": 35,
+      "src": "/assets/characters/sprites/clothes_female_6.webp",
+      "category": "clothes",
+      "gender": "woman"
+    },
+    "clothes_female_7": {
+      "x": 848,
+      "y": 168,
+      "w": 38,
+      "h": 35,
+      "src": "/assets/characters/sprites/clothes_female_7.webp",
+      "category": "clothes",
+      "gender": "woman"
+    },
+    "clothes_female_8": {
+      "x": 898,
+      "y": 168,
+      "w": 38,
+      "h": 35,
+      "src": "/assets/characters/sprites/clothes_female_8.webp",
+      "category": "clothes",
+      "gender": "woman"
+    },
+    "clothes_female_9": {
+      "x": 798,
+      "y": 214,
+      "w": 38,
+      "h": 35,
+      "src": "/assets/characters/sprites/clothes_female_9.webp",
+      "category": "clothes",
+      "gender": "woman"
+    },
+    "clothes_female_10": {
+      "x": 848,
+      "y": 214,
+      "w": 38,
+      "h": 35,
+      "src": "/assets/characters/sprites/clothes_female_10.webp",
+      "category": "clothes",
+      "gender": "woman"
+    },
+    "clothes_female_11": {
+      "x": 898,
+      "y": 214,
+      "w": 38,
+      "h": 35,
+      "src": "/assets/characters/sprites/clothes_female_11.webp",
+      "category": "clothes",
+      "gender": "woman"
+    },
+    "accessory_0": {
+      "x": 798,
+      "y": 264,
+      "w": 38,
+      "h": 35,
+      "src": "/assets/characters/sprites/accessory_0.webp",
+      "category": "accessory",
+      "gender": "any"
+    },
+    "accessory_1": {
+      "x": 848,
+      "y": 264,
+      "w": 38,
+      "h": 35,
+      "src": "/assets/characters/sprites/accessory_1.webp",
+      "category": "accessory",
+      "gender": "any"
+    },
+    "accessory_2": {
+      "x": 898,
+      "y": 264,
+      "w": 38,
+      "h": 35,
+      "src": "/assets/characters/sprites/accessory_2.webp",
+      "category": "accessory",
+      "gender": "any"
+    },
+    "accessory_3": {
+      "x": 798,
+      "y": 310,
+      "w": 38,
+      "h": 35,
+      "src": "/assets/characters/sprites/accessory_3.webp",
+      "category": "accessory",
+      "gender": "any"
+    },
+    "accessory_4": {
+      "x": 848,
+      "y": 310,
+      "w": 38,
+      "h": 35,
+      "src": "/assets/characters/sprites/accessory_4.webp",
+      "category": "accessory",
+      "gender": "any"
+    },
+    "accessory_5": {
+      "x": 898,
+      "y": 310,
+      "w": 38,
+      "h": 35,
+      "src": "/assets/characters/sprites/accessory_5.webp",
+      "category": "accessory",
+      "gender": "any"
+    },
+    "accessory_6": {
+      "x": 798,
+      "y": 356,
+      "w": 38,
+      "h": 35,
+      "src": "/assets/characters/sprites/accessory_6.webp",
+      "category": "accessory",
+      "gender": "any"
+    },
+    "accessory_7": {
+      "x": 848,
+      "y": 356,
+      "w": 38,
+      "h": 35,
+      "src": "/assets/characters/sprites/accessory_7.webp",
+      "category": "accessory",
+      "gender": "any"
+    },
+    "accessory_8": {
+      "x": 898,
+      "y": 356,
+      "w": 38,
+      "h": 35,
+      "src": "/assets/characters/sprites/accessory_8.webp",
+      "category": "accessory",
+      "gender": "any"
+    },
+    "accessory_9": {
+      "x": 798,
+      "y": 402,
+      "w": 38,
+      "h": 35,
+      "src": "/assets/characters/sprites/accessory_9.webp",
+      "category": "accessory",
+      "gender": "any"
+    },
+    "accessory_10": {
+      "x": 848,
+      "y": 402,
+      "w": 38,
+      "h": 35,
+      "src": "/assets/characters/sprites/accessory_10.webp",
+      "category": "accessory",
+      "gender": "any"
+    },
+    "accessory_11": {
+      "x": 898,
+      "y": 402,
+      "w": 38,
+      "h": 35,
+      "src": "/assets/characters/sprites/accessory_11.webp",
+      "category": "accessory",
+      "gender": "any"
+    }
+  }
+}
