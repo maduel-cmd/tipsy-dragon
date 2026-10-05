@@ -28,13 +28,16 @@ npm run build
 ## QA / שער מקומי
 
 ```bash
-npm test                 # unit + asset/env/animation QA asserts
+npm test                 # unit + asset/env/animation/iphone CSS asserts
 npm run qa:assets        # קטלוג ↔ דיסק + anti-placeholder
 npm run qa:environments  # 6 סביבות + אייקונים + mobile
 npm run qa:animations    # CSS motion / reduced-motion
+npm run qa:iphone        # iPhone SE + 14/15: no document scroll (needs build/preview)
 npm run typecheck
 npm run build
 ```
+
+> **Live Netlify:** `qa:live` HEAD checks production. The iPhone viewport-fit layout is on this PR branch until Rotem approves a Netlify deploy — use local `qa:iphone` / preview for visual confirm until then.
 
 בדיקת HEAD מול פרוד (אופציונלי, דורש רשת):
 
