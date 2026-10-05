@@ -5,7 +5,7 @@ import { test, expect } from "@playwright/test";
 import { ENVIRONMENTS } from "../src/config/environments";
 
 const base = process.env.PLAYWRIGHT_BASE_URL ?? "http://127.0.0.1:5175";
-const bust = "tipsy-v32-meta-sprint";
+const bust = "tipsy-v33-marketable-parity";
 
 test.describe("Environments & Dynamic Orders QA Loop", () => {
   for (const [envId, envConfig] of Object.entries(ENVIRONMENTS)) {

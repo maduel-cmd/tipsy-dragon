@@ -1,5 +1,6 @@
 import { useEffect, useState } from "react";
 import { onAssetsReady, spriteUrl } from "../game/assetLoader";
+import { allowEmojiFallback } from "../game/prodPlaceholders";
 
 type Props = {
   spriteId?: string;
@@ -9,7 +10,11 @@ type Props = {
   className?: string;
 };
 
-/** תמונת מוצר מאסטים — מתעדכן כשהאסטים נטענים; נפילה לאימוג׳י אם אין ספרייט */
+/**
+ * תמונת מוצר מאסטים — מתעדכן כשהאסטים נטענים.
+ * בפרוד: אין emoji כשיש sprite מוכן (או כשהמניפסט נכשל) — רק שלד ריק.
+ * ב־dev: emoji + באנר אדום לזיהוי חסרים.
+ */
 export function ProductArt({ spriteId, emoji, accent, alt, className }: Props) {
   const [src, setSrc] = useState<string | undefined>(() =>
     spriteId ? spriteUrl(spriteId) : undefined,
@@ -26,13 +31,16 @@ export function ProductArt({ spriteId, emoji, accent, alt, className }: Props) {
   }, [spriteId]);
 
   if (!src || failed) {
+    const showEmoji = allowEmojiFallback();
     return (
       <span
-        className={`product-art emoji-fallback ${className ?? ""}`}
+        className={`product-art ${showEmoji ? "emoji-fallback" : "asset-missing"} ${className ?? ""}`}
         style={{ background: accent }}
         aria-hidden
+        title={showEmoji ? `DEV fallback · ${spriteId ?? "no-sprite"}` : undefined}
+        data-placeholder={showEmoji ? "emoji-dev" : "missing-prod"}
       >
-        {emoji}
+        {showEmoji ? emoji : null}
       </span>
     );
   }

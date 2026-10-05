@@ -383,9 +383,68 @@ button:disabled {
 }
 
 .env-card .env-emoji {
-  font-size: 1.8rem;
+  /* legacy — replaced by .env-icon */
+  display: none;
+}
+
+.env-icon {
+  display: inline-block;
+  border-radius: 8px;
+  object-fit: cover;
+  vertical-align: middle;
+  border: 1px solid rgba(255, 255, 255, 0.28);
+  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.35);
+}
+
+.env-icon-row {
   display: block;
-  margin-bottom: 0.35rem;
+  margin: 0.2rem 0 0.35rem;
+}
+
+.env-icon--hud {
+  margin-inline-end: 0.35rem;
+}
+
+.env-hud-value {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.25rem;
+}
+
+.env-switch-chip {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.4rem;
+}
+
+.product-art.asset-missing,
+.character-avatar.asset-missing {
+  position: relative;
+  min-width: 2rem;
+  min-height: 2rem;
+  background: rgba(40, 20, 20, 0.55) !important;
+}
+
+.product-art.emoji-fallback::after,
+.character-avatar.emoji-fallback::after {
+  content: "DEV";
+  position: absolute;
+  inset-inline-start: 2px;
+  top: 2px;
+  font-size: 0.55rem;
+  font-weight: 800;
+  letter-spacing: 0.04em;
+  color: #fff;
+  background: #c62828;
+  padding: 1px 4px;
+  border-radius: 3px;
+  line-height: 1.2;
+  z-index: 2;
+}
+
+.product-art.emoji-fallback,
+.character-avatar.emoji-fallback {
+  position: relative;
 }
 
 .env-card h3 {

@@ -13,7 +13,7 @@ export type AssetManifest = {
 };
 
 /** תואם ל־BUILD_ID ב־main / sw — מונע מטמון ישן על WebP */
-const ASSET_CACHE_BUST = "tipsy-v32-meta-sprint";
+const ASSET_CACHE_BUST = "tipsy-v33-marketable-parity";
 
 let manifest: AssetManifest | null = null;
 let loadPromise: Promise<AssetManifest> | null = null;
@@ -41,7 +41,7 @@ function notifyReady() {
   }
 }
 
-/** נרשמים לשינוי מוכנות אסטים (כדי ש־ProductArt יעבור מאימוג׳י לתמונה) */
+/** נרשמים לשינוי מוכנות אסטים (כדי ש־ProductArt יעבור מתמונה חסרה לתמונה) */
 export function onAssetsReady(cb: () => void): () => void {
   readyListeners.add(cb);
   if (manifest) {

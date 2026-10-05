@@ -15,9 +15,14 @@ export interface EnvironmentConfig {
   name: string;
   nameHebrew: string;
   tagline: string;
+  /** @deprecated emoji — kept for a11y/tests; UI uses iconAsset */
   decor: string;
+  /** Photoreal / cropped env thumb for selector & HUD (no emoji) */
+  iconAsset: string;
   accent: string;
   backgroundAsset: string;
+  /** Narrower WebP for mobile / save-data */
+  mobileBackgroundAsset: string;
   counterStyle: {
     texture: CounterTexture;
     dropShadow: string;
@@ -27,6 +32,14 @@ export interface EnvironmentConfig {
   /** סיכוי גבוה יותר בהזמנות (×3) */
   popularItemIds: string[];
   customerSpawnRateMs: number;
+}
+
+function envPaths(id: EnvironmentId) {
+  return {
+    backgroundAsset: `/assets/environments/${id}.webp`,
+    mobileBackgroundAsset: `/assets/environments/mobile/${id}.webp`,
+    iconAsset: `/assets/environments/icons/${id}.webp`,
+  };
 }
 
 /**
@@ -39,9 +52,9 @@ export const ENVIRONMENTS: Record<EnvironmentId, EnvironmentConfig> = {
     name: "Circus Carnival",
     nameHebrew: "קרקס",
     tagline: "פופקורן, צמר גפן ודוכן יריד זוהר",
-    decor: "🎪",
+    decor: "circus",
+    ...envPaths("circus"),
     accent: "#e63946",
-    backgroundAsset: "/assets/environments/circus.webp",
     counterStyle: { texture: "wood", dropShadow: "0 6px 14px rgba(230, 57, 70, 0.4)" },
     allowedItemIds: [
       "churros_plate",
@@ -59,9 +72,9 @@ export const ENVIRONMENTS: Record<EnvironmentId, EnvironmentConfig> = {
     name: "School Cafeteria",
     nameHebrew: "מזנון בית ספר",
     tagline: "מגשים, נירוסטה וארוחת צהריים של בית ספר",
-    decor: "🏫",
+    decor: "school",
+    ...envPaths("school_cafeteria"),
     accent: "#5c6bc0",
-    backgroundAsset: "/assets/environments/school_cafeteria.webp",
     counterStyle: { texture: "metal", dropShadow: "0 4px 10px rgba(0, 0, 0, 0.25)" },
     allowedItemIds: [
       "mac_and_cheese",
@@ -79,9 +92,9 @@ export const ENVIRONMENTS: Record<EnvironmentId, EnvironmentConfig> = {
     name: "Mall Food Court",
     nameHebrew: "דוכן בקניון",
     tagline: "גלובל פאלט · קערות, ראמן וטאקוס",
-    decor: "🛍️",
+    decor: "mall",
+    ...envPaths("mall_food_court"),
     accent: "#26a69a",
-    backgroundAsset: "/assets/environments/mall_food_court.webp",
     counterStyle: { texture: "marble", dropShadow: "0 6px 12px rgba(0, 0, 0, 0.3)" },
     allowedItemIds: [
       "pad_thai",
@@ -99,9 +112,9 @@ export const ENVIRONMENTS: Record<EnvironmentId, EnvironmentConfig> = {
     name: "Forest Cart",
     nameHebrew: "עגלה ביער",
     tagline: "עגלת עץ בין אורנים · מטבח כפרי",
-    decor: "🌲",
+    decor: "forest",
+    ...envPaths("forest_cart"),
     accent: "#8fbc8f",
-    backgroundAsset: "/assets/environments/forest_cart.webp",
     counterStyle: { texture: "rustic_log", dropShadow: "0 8px 16px rgba(40, 30, 20, 0.5)" },
     allowedItemIds: [
       "steak_ribeye",
@@ -118,9 +131,9 @@ export const ENVIRONMENTS: Record<EnvironmentId, EnvironmentConfig> = {
     name: "Urban Street Festival",
     nameHebrew: "פסטיבל עירוני",
     tagline: "רחוב מואר · אוכל רחוב גלובלי",
-    decor: "🌃",
+    decor: "urban",
+    ...envPaths("urban_festival"),
     accent: "#e9c46a",
-    backgroundAsset: "/assets/environments/urban_festival.webp",
     counterStyle: { texture: "wood", dropShadow: "0 8px 16px rgba(0, 0, 0, 0.45)" },
     allowedItemIds: [
       "shawarma_wrap",
@@ -139,9 +152,9 @@ export const ENVIRONMENTS: Record<EnvironmentId, EnvironmentConfig> = {
     name: "Playground Snack Booth",
     nameHebrew: "מגרש משחקים",
     tagline: "דוכן חטיפים ליד המגלשות",
-    decor: "🛝",
+    decor: "playground",
+    ...envPaths("playground"),
     accent: "#42a5f5",
-    backgroundAsset: "/assets/environments/playground.webp",
     counterStyle: { texture: "wood", dropShadow: "0 4px 8px rgba(0, 0, 0, 0.2)" },
     allowedItemIds: ["ice_cream_cone", "hotdog", "fries", "pancakes", "croissant"],
     popularItemIds: ["ice_cream_cone", "fries", "hotdog"],
@@ -164,4 +177,9 @@ export function isEnvironmentId(id: string): id is EnvironmentId {
 /** CSS class לדלפק לפי מרקם */
 export function counterTextureClass(texture: CounterTexture): string {
   return `counter-texture-${texture}`;
+}
+
+/** Emoji codepoints — banned in environment decor / HUD labels when icons exist */
+export function decorContainsEmoji(decor: string): boolean {
+  return /[\u{1F300}-\u{1FAFF}\u{2600}-\u{27BF}]/u.test(decor);
 }

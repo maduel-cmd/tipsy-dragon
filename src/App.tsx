@@ -151,6 +151,7 @@ export default function App() {
   const [envId, setEnvId] = useState<EnvironmentId>(() => initialEnvId());
   const env: GameEnvironment = getEnvironment(envId);
   const [envBgReady, setEnvBgReady] = useState(true);
+  const [narrowViewport, setNarrowViewport] = useState(false);
 
   const [stageNumber, setStageNumber] = useState(1);
   const [groupsDoneInStage, setGroupsDoneInStage] = useState(0);
@@ -223,6 +224,16 @@ export default function App() {
       window.removeEventListener("offline", off);
     };
   }, []);
+
+  useEffect(() => {
+    const mq = window.matchMedia("(max-width: 720px)");
+    const apply = () => setNarrowViewport(mq.matches);
+    apply();
+    mq.addEventListener("change", apply);
+    return () => mq.removeEventListener("change", apply);
+  }, []);
+
+  const envVisualBg = narrowViewport ? env.mobileBackgroundAsset : env.backgroundAsset;
 
   useEffect(() => {
     let cancelled = false;
@@ -722,7 +733,7 @@ export default function App() {
             className={`environment-background${envBgReady ? " is-ready" : ""}`}
             aria-hidden
             style={{
-              backgroundImage: `linear-gradient(180deg, rgba(8, 12, 24, 0.35), rgba(8, 12, 24, 0.72)), url("${env.backgroundAsset}")`,
+              backgroundImage: `linear-gradient(180deg, rgba(8, 12, 24, 0.35), rgba(8, 12, 24, 0.72)), url("${envVisualBg}")`,
             }}
           />
           <img
@@ -730,6 +741,7 @@ export default function App() {
             src={env.backgroundAsset}
             alt=""
             data-testid="environment-bg-img"
+            data-mobile-src={env.mobileBackgroundAsset}
             hidden
           />
           <div className="fairy-overlay soft" aria-hidden />
@@ -909,8 +921,17 @@ export default function App() {
               </div>
               <div className="hud-stat">
                 <span className="label">סביבה</span>
-                <span className="value" style={{ fontSize: "0.95rem" }}>
-                  {env.decor} {env.nameHebrew}
+                <span className="value env-hud-value" style={{ fontSize: "0.95rem" }}>
+                  <img
+                    className="env-icon env-icon--hud"
+                    src={env.iconAsset}
+                    alt=""
+                    width={22}
+                    height={22}
+                    draggable={false}
+                    aria-hidden
+                  />
+                  {env.nameHebrew}
                 </span>
               </div>
               <EnvironmentSelector compact value={envId} onChange={switchEnvironment} />

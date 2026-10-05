@@ -5,7 +5,7 @@
 import { test, expect } from "@playwright/test";
 
 const base = process.env.PLAYWRIGHT_BASE_URL ?? "https://traillink-foodtruck-bar.netlify.app";
-const bust = "tipsy-v32-meta-sprint";
+const bust = "tipsy-v33-marketable-parity";
 
 async function startNight(page: import("@playwright/test").Page, env = "circus") {
   await page.emulateMedia({ reducedMotion: "reduce" });
