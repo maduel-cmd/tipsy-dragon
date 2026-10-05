@@ -5,6 +5,11 @@
 
 ריפו עצמאי, חולץ מתוך [TrailLink](https://github.com/maduel-cmd/TrailLink) (`apps/foodtruck-bar`).
 
+## Live
+
+- https://traillink-foodtruck-bar.netlify.app
+- https://tipsy-dragon.netlify.app
+
 ## הרצה
 
 ```bash
@@ -20,17 +25,52 @@ npm run dev
 npm run build
 ```
 
-בדיקות:
+## QA / שער מקומי
 
 ```bash
-npm test
+npm test                 # unit + asset/env/animation QA asserts
+npm run qa:assets        # קטלוג ↔ דיסק + anti-placeholder
+npm run qa:environments  # 6 סביבות + אייקונים + mobile
+npm run qa:animations    # CSS motion / reduced-motion
+npm run typecheck
+npm run build
 ```
+
+בדיקת HEAD מול פרוד (אופציונלי, דורש רשת):
+
+```bash
+QA_LIVE_URL=https://traillink-foodtruck-bar.netlify.app npm run qa:live
+# או
+QA_LIVE_URL=https://tipsy-dragon.netlify.app npm run qa:assets
+```
+
+Playwright E2E (דורש `@playwright/test` + שרת רץ / URL חי):
+
+```bash
+PLAYWRIGHT_BASE_URL=http://127.0.0.1:5180 npm run qa:environments:e2e
+PLAYWRIGHT_BASE_URL=http://127.0.0.1:5180 npm run qa:animations:e2e
+```
+
+תיעוד צינור אמנות: [`docs/ASSET_PIPELINE_FOODTRUCK_he.md`](docs/ASSET_PIPELINE_FOODTRUCK_he.md) · [`docs/ASSETS_TIPSY_DRAGON_he.md`](docs/ASSETS_TIPSY_DRAGON_he.md)
+
+## פרומו / Store listing
+
+צילומים ממותגים: [`docs/promo/`](docs/promo/) (וגם `public/promo/` בבילד) · `og:image` = `/promo/og.jpg`
+
+| | עברית | English |
+| --- | --- | --- |
+| **שם** | הדרקון השיכור · משאית האוכל | The Tipsy Dragon |
+| **סוג** | טייקון משאית אוכל — הכנה, הגשה, סביבות שטח | Food-truck bar tycoon — prep, serve, field environments |
+| **מה מיוחד** | תפריט photoreal, HUD בעברית, 6 סביבות (קרקס עד פסטיבל), PWA אופליין, מגע גדול לשטח | Photoreal menu, Hebrew HUD, six field environments, offline PWA, touch-first |
+| **קצר לחנות** | הגישו מנות חמות ממשאית האוכל לפני שהלקוחות בורחים. שיאי שלב אינסופיים. | Serve hot plates from your food truck before customers bail. Endless stage highs. |
+
+![Hero promo](docs/promo/01-hero-truck.jpg)
 
 ## פריסה ל-Netlify
 
-**אתר חי:** https://traillink-foodtruck-bar.netlify.app
+מוגדר דרך `netlify.toml`: `npm run build`, publish `dist`, Node 22.
 
-מוגדר דרך `netlify.toml` בשורש הריפו: `npm run build`, publish `dist`, Node 22.
+> Deploy / merge לפרוד — רק אחרי אישור מפורש.
 
 בטלפון: פתחו את הקישור → שתפו / «הוסף למסך הבית» (PWA).
 
@@ -54,9 +94,11 @@ npm test
 ## מבנה
 
 - `src/game/catalog.ts` — קטלוג מוצרים (כולל אוכל חם)
-- `src/config/environments.ts` — 6 סביבות
+- `src/config/environments.ts` — 6 סביבות + אייקונים + mobile WebP
 - `src/game/waves.ts` — `getStageConfig` לשלבים אינסופיים מתגברים
 - `src/game/progress.ts`, `sfx.ts`, `moodLines.ts`, `fieldUx.ts` — התקדמות, סאונד, מצב־רוח, UX שטח
 - `src/components/PwaUpdateBanner.tsx` — עדכון PWA
-- `public/assets/` — כל אמנות המשחק (environments, items, characters, sprites)
+- `public/assets/` — אמנות חיה (environments, items, characters; UI sprites מינימליים)
+- `archive/legacy-sprites/` — לוחות ישנים מחוץ לבילד
+- `public/promo/` — פרומו + og:image
 - `src/App.tsx` — לולאת המשחק

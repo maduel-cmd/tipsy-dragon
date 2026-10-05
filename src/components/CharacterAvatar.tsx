@@ -6,6 +6,7 @@ import {
   type CharacterLoadout,
   type CharacterCategory,
 } from "../game/characterCatalog";
+import { allowEmojiFallback } from "../game/prodPlaceholders";
 
 type Props = {
   loadout: CharacterLoadout;
@@ -44,7 +45,8 @@ function buildLayers(loadout: CharacterLoadout): Layer[] {
 }
 
 /**
- * אווטאר לקוח מודולרי — שכבות מעל גוף בסיס לפי עוגנים ב־characters.json
+ * אווטאר לקוח מודולרי — שכבות מעל גוף בסיס לפי עוגנים ב־characters.json.
+ * בפרוד: אין emoji כשיש ספרייטים; ב־dev בלבד fallback עם באנר.
  */
 export function CharacterAvatar({ loadout, className, alt }: Props) {
   const [, setTick] = useState(0);
@@ -62,9 +64,21 @@ export function CharacterAvatar({ loadout, className, alt }: Props) {
   const anchors = getCharacterManifest()?.anchors ?? {};
 
   if (layers.length === 0) {
+    const showEmoji = allowEmojiFallback();
     return (
-      <span className={`character-avatar emoji-fallback ${className ?? ""}`} aria-hidden>
-        {loadout.gender === "kid" ? "🧒" : loadout.gender === "woman" ? "👩" : "🧑"}
+      <span
+        className={`character-avatar ${showEmoji ? "emoji-fallback" : "asset-missing"} ${className ?? ""}`}
+        aria-hidden
+        data-placeholder={showEmoji ? "emoji-dev" : "missing-prod"}
+        title={showEmoji ? "DEV character fallback" : undefined}
+      >
+        {showEmoji
+          ? loadout.gender === "kid"
+            ? "🧒"
+            : loadout.gender === "woman"
+              ? "👩"
+              : "🧑"
+          : null}
       </span>
     );
   }

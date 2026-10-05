@@ -48,6 +48,15 @@ for (const env of ENVIRONMENT_LIST) {
     assert.ok(statSync(file).size > 1000, `too small: ${file}`);
   });
 
+  test(`environment icon + mobile assets exist: ${env.id}`, () => {
+    for (const rel of [env.iconAsset, env.mobileBackgroundAsset]) {
+      const file = path.join(publicDir, rel.replace(/^\//, ""));
+      assert.ok(existsSync(file), `missing ${file}`);
+      assert.ok(statSync(file).size > 1000, `too small: ${file}`);
+    }
+    assert.ok(!/[\u{1F300}-\u{1FAFF}]/u.test(env.decor), `${env.id} decor still emoji`);
+  });
+
   test(`orders stay within allowed menu: ${env.id}`, () => {
     const stage = getStageConfig(5);
     const shelf = new Set(shelfProductsForEnvironment(env).map((p) => p.id));

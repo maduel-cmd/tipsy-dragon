@@ -13,8 +13,24 @@ type Props = {
   className?: string;
 };
 
+function EnvIcon({ env, size = 28 }: { env: EnvironmentConfig; size?: number }) {
+  return (
+    <img
+      className="env-icon"
+      src={env.iconAsset}
+      alt=""
+      width={size}
+      height={size}
+      draggable={false}
+      decoding="async"
+      aria-hidden
+    />
+  );
+}
+
 /**
  * בורר סביבות — רשת כרטיסים או מגירה קומפקטית בזמן משחק.
+ * אייקונים מתוך רקע הסביבה (לא emoji).
  */
 export function EnvironmentSelector({ value, onChange, compact = false, className }: Props) {
   const [open, setOpen] = useState(false);
@@ -38,7 +54,8 @@ export function EnvironmentSelector({ value, onChange, compact = false, classNam
           aria-haspopup="dialog"
           onClick={() => setOpen((v) => !v)}
         >
-          {current.decor} {current.nameHebrew}
+          <EnvIcon env={current} size={22} />
+          <span>{current.nameHebrew}</span>
         </button>
         {open && (
           <div className="env-drawer" role="dialog" aria-label="בחירת סביבה">
@@ -52,7 +69,7 @@ export function EnvironmentSelector({ value, onChange, compact = false, classNam
                   style={{ ["--truck" as string]: e.accent }}
                   onClick={() => select(e)}
                 >
-                  <span className="env-emoji">{e.decor}</span>
+                  <EnvIcon env={e} size={36} />
                   <h3>{e.nameHebrew}</h3>
                   <p>{e.name}</p>
                 </button>
@@ -84,7 +101,9 @@ export function EnvironmentSelector({ value, onChange, compact = false, classNam
             style={{ backgroundImage: `url(${e.backgroundAsset})` }}
             aria-hidden
           />
-          <span className="env-emoji">{e.decor}</span>
+          <span className="env-icon-row">
+            <EnvIcon env={e} size={40} />
+          </span>
           <h3>{e.nameHebrew}</h3>
           <p>{e.tagline}</p>
         </button>
