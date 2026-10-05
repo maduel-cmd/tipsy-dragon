@@ -8,11 +8,12 @@
     "build": "tsc --noEmit && vite build && node scripts/generate-precache.mjs",
     "preview": "vite preview",
     "typecheck": "tsc --noEmit",
-    "test": "npx --yes tsx --test src/game/waves.test.ts src/game/characterCatalog.test.ts src/game/pwaInstall.test.ts src/game/assetsQa.test.ts src/game/moodLines.test.ts src/game/progress.test.ts src/game/fieldUx.test.ts src/systems/environmentsQa.test.ts src/hooks/animationsQa.test.ts",
+    "test": "npx --yes tsx --test src/game/waves.test.ts src/game/characterCatalog.test.ts src/game/pwaInstall.test.ts src/game/assetsQa.test.ts src/game/moodLines.test.ts src/game/progress.test.ts src/game/fieldUx.test.ts src/systems/environmentsQa.test.ts src/hooks/animationsQa.test.ts src/game/iphoneViewportQa.test.ts",
     "qa:assets": "npx --yes tsx scripts/qa-asset-loop.ts",
     "qa:live": "QA_LIVE_REQUIRED=1 npx --yes tsx scripts/qa-asset-loop.ts",
     "qa:environments": "npx --yes tsx --test src/systems/environmentsQa.test.ts",
     "qa:animations": "npx --yes tsx --test src/hooks/animationsQa.test.ts",
+    "qa:iphone": "npx --yes tsx scripts/qa-iphone-viewport.ts",
     "qa:environments:e2e": "npx --yes playwright test tests/environments-qa.spec.ts",
     "qa:animations:e2e": "npx --yes playwright test tests/animations-qa.spec.ts",
     "lint": "echo \"lint:foodtruck-bar ok\""
@@ -26,6 +27,7 @@
     "@types/react": "^18.3.12",
     "@types/react-dom": "^18.3.1",
     "@vitejs/plugin-react": "^4.3.4",
+    "puppeteer-core": "^25.12.0",
     "sharp": "^0.34.5",
     "typescript": "^5.8.2",
     "vite": "^6.2.0"

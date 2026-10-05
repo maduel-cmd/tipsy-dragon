@@ -901,7 +901,7 @@ export default function App() {
         )}
 
         {phase === "playing" && (
-          <section className="game-screen thumb-layout">
+          <section className="game-screen thumb-layout" data-testid="game-screen">
             <header className="hud">
               <div className="hud-stat">
                 <span className="label">ניקוד</span>
